@@ -5,13 +5,17 @@ const isDec = require("./isDec")
 /**
  * Convert a number require(binary or hexadecimal number to decimal
  * @param {string|number} num binary or hexadecimal number
+ * @param {object} [options] what number system to convert from `{bin: true} | {hex: true} | {dec: true}`
  *
  * @returns {number|null} decimal if successful, null if not
+ * 
+ * @example toDec("1F", {hex: true})
  */
-const toDec = num => {
-  if (isDec(num)) return num
-  if (isBin(num)) return parseInt(num, 2)
-  if (isHex(num)) return parseInt(num, 16)
+const toDec = (num, options) => {
+  options = options || {dec: true}
+  if (options.dec) return num
+  if (options.bin) return parseInt(num, 2)
+  if (options.hex) return parseInt(num, 16)
   return null
 }
 
