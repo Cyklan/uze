@@ -1,0 +1,15 @@
+{
+  "name": "uze",
+  "version": "0.1.0",
+  "description": "Another JavaScript utility package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Nils Fahle",
+    "email": "dev@cyklan.de"
+  },
+  "license": "ISC"
+}
