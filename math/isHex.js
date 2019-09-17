@@ -10,4 +10,4 @@ const isHex = num => {
   return reg.test(num.toString())
 }
 
-export default isHex
+module.exports = isHex

@@ -10,4 +10,4 @@ const isBin = num => {
   return reg.test(num.toString())
 }
 
-export default isBin
+module.exports = isBin

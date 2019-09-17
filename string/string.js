@@ -1,1 +1,3 @@
-export const trimText = require("./trimText")
+module.exports = {
+  trimText: require("./trimText"),
+}

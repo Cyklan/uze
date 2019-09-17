@@ -1,3 +1,5 @@
-export const string = require("./string/string")
-export const math = require("./math/math")
-export const object = require("./object/object")
+module.exports = {
+  string: require("./string/string"),
+  math: require("./math/math"),
+  object: require("./object/object")
+}

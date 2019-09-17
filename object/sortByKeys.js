@@ -17,4 +17,4 @@ const sortByKeys = unsorted => {
   return sorted
 }
 
-export default sortByKeys
+module.exports = sortByKeys

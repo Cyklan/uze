@@ -1,9 +1,9 @@
-import isBin from "./isBin"
-import isHex from "./isHex"
-import isDec from "./isDec"
+const isBin = require("./isBin")
+const isHex = require("./isHex")
+const isDec = require("./isDec")
 
 /**
- * Convert a number from binary or hexadecimal number to decimal
+ * Convert a number require(binary or hexadecimal number to decimal
  * @param {string|number} num binary or hexadecimal number
  *
  * @returns {number|null} decimal if successful, null if not
@@ -15,4 +15,4 @@ const toDec = num => {
   return null
 }
 
-export default toDec
+module.exports = toDec

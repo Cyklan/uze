@@ -6,7 +6,7 @@
  * @returns {string} A string trimmed to a specified length
  */
 
-const trimText = (str, maxLength) => trimText(str, maxLength, false)
+function trimText(str, maxLength) { return trimText(str, maxLength, false) }
 
 /**
  *
@@ -17,7 +17,7 @@ const trimText = (str, maxLength) => trimText(str, maxLength, false)
  * @returns {string} A string trimmed to a specified length
  */
 
-const trimText = (str, maxLength, mindWords) => {
+function trimText(str, maxLength, mindWords) {
   const trimmedString = str.substr(0, maxLength)
   return mindWords
     ? trimmedString.substr(
@@ -27,6 +27,4 @@ const trimText = (str, maxLength, mindWords) => {
     : trimmedString
 }
 
-trimText("abc", 10)
-
-export default trimText
+module.exports = trimText

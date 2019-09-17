@@ -1,9 +1,9 @@
-import isEmptyObject from "./isEmptyObject"
+const isEmptyObject = require("./isEmptyObject")
 
 /**
  * Swap keys and values of objects around
  * @param {*} obj Object of which to swap keys
- * 
+ *
  * @returns {Object} Object with swapped keys
  */
 const swap = obj => {
@@ -16,4 +16,4 @@ const swap = obj => {
   return swapped
 }
 
-export default swap
+module.exports = swap

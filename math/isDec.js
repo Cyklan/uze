@@ -10,4 +10,4 @@ const isDec = num => {
   return reg.test(num.toString())
 }
 
-export default isDec
+module.exports = isDec

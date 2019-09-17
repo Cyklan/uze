@@ -1,6 +1,8 @@
-export const isBin = require("./isBin")
-export const isDec = require("./isDec")
-export const isHex = require("./isHex")
-export const toBin = require("./toBin")
-export const toDec = require("./toDec")
-export const toHex = require("./toHex")
+module.exports = {
+  isBin: require("./isBin"),
+  isDec: require("./isDec"),
+  isHex: require("./isHex"),
+  toBin: require("./toBin"),
+  toDec: require("./toDec"),
+  toHex: require("./toHex")
+}
