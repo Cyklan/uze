@@ -7,6 +7,7 @@ const isEmptyObject = require("./isEmptyObject")
  */
 
 const sortByKeys = unsorted => {
+  if (!unsorted) return {}
   if (isEmptyObject(unsorted)) return unsorted
   const sorted = {}
   Object.keys(unsorted)

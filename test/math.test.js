@@ -86,30 +86,30 @@ describe("toBin", () => {
 
 describe("toDec", () => {
   it("should convert a non-decimal number to a decimal number", () => {
-      assert.equal(uze.math.toDec("da", {hex: true}), 218)
-      assert.equal(uze.math.toDec("11011010", {bin: true}), 218)
+    assert.equal(uze.math.toDec("da", { hex: true }), 218)
+    assert.equal(uze.math.toDec("11011010", { bin: true }), 218)
   })
   it("should return a number on success", () => {
-      assert.isNumber(uze.math.toDec("1F", {hex: true}))
-      assert.isNumber(uze.math.toDec("1100", {bin: true}))
+    assert.isNumber(uze.math.toDec("1F", { hex: true }))
+    assert.isNumber(uze.math.toDec("1100", { bin: true }))
   })
   it("should return null on failure", () => {
-      assert.isNull(uze.math.toDec())
-      assert.isNull(uze.math.toDec("foobar"))
+    assert.isNull(uze.math.toDec())
+    assert.isNull(uze.math.toDec("foobar"))
   })
 })
 
 describe("toHex", () => {
-    it("should convert a non-hexadecimal number to a hexadecimal number", () => {
-        assert.equal(uze.math.toHex(218).toLowerCase(), "da")
-        assert.equal(uze.math.toHex("11011010", {bin: true}).toLowerCase(), "da")
-    })
-    it("should return a string on success", () => {
-        assert.isString(uze.math.toHex(218))
-        assert.isString(uze.math.toHex("1010", {bin: true}))
-    })
-    it("should return null on failure", () => {
-        assert.isNull(uze.math.toHex("fooBar"))
-        assert.isNull(uze.math.toHex())
-    })
+  it("should convert a non-hexadecimal number to a hexadecimal number", () => {
+    assert.equal(uze.math.toHex(218).toLowerCase(), "da")
+    assert.equal(uze.math.toHex("11011010", { bin: true }).toLowerCase(), "da")
+  })
+  it("should return a string on success", () => {
+    assert.isString(uze.math.toHex(218))
+    assert.isString(uze.math.toHex("1010", { bin: true }))
+  })
+  it("should return null on failure", () => {
+    assert.isNull(uze.math.toHex("fooBar"))
+    assert.isNull(uze.math.toHex())
+  })
 })

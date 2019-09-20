@@ -7,6 +7,7 @@ const isEmptyObject = require("./isEmptyObject")
  * @returns {Object} Object with swapped keys
  */
 const swap = obj => {
+  if (!obj) return {}
   if (isEmptyObject(obj)) return obj
   const swapped = {}
   Object.keys(obj).forEach(key => {

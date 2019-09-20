@@ -6,7 +6,11 @@
  * @returns {string} A string trimmed to a specified length
  */
 
-function trimText(str, maxLength) { return trimText(str, maxLength, false) }
+function trimText(str, maxLength) {
+  if (!str) return "undefined"
+  if (!maxLength) return str
+  return trimText(str, maxLength, false)
+}
 
 /**
  *
@@ -18,6 +22,8 @@ function trimText(str, maxLength) { return trimText(str, maxLength, false) }
  */
 
 function trimText(str, maxLength, mindWords) {
+  if(!str) return "undefined"
+  if (!maxLength) return str
   const trimmedString = str.substr(0, maxLength)
   return mindWords
     ? trimmedString.substr(
