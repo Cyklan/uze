@@ -113,3 +113,66 @@ describe("toHex", () => {
     assert.isNull(uze.math.toHex())
   })
 })
+
+describe("isEven", () => {
+  it("should always return a boolean", () => {
+    assert.isBoolean(uze.math.isEven(3))
+    assert.isBoolean(uze.math.isEven(2))
+    assert.isBoolean(uze.math.isEven())
+  })
+  it("should return true if num is even", () => {
+    assert.isTrue(uze.math.isEven(76))
+    assert.isTrue(uze.math.isEven(1064))
+  })
+  it("should return false if num is not even", () => {
+    assert.isFalse(uze.math.isEven(7))
+    assert.isFalse(uze.math.isEven(3.14))
+    assert.isFalse(uze.math.isEven())
+  })
+})
+
+describe("isOdd", () => {
+  it("should always return a boolean", () => {
+    assert.isBoolean(uze.math.isOdd(3))
+    assert.isBoolean(uze.math.isOdd(2))
+    assert.isBoolean(uze.math.isOdd())
+  })
+
+  it("should return true if num is odd", () => {
+    assert.isTrue(uze.math.isOdd(77))
+    assert.isTrue(uze.math.isOdd(1065))
+  })
+  it("should return false if num is not odd", () => {
+    assert.isFalse(uze.math.isOdd(6))
+    assert.isFalse(uze.math.isOdd(1204))
+    assert.isFalse(uze.math.isOdd())
+  })
+})
+
+describe("isPrime", () => {
+  it("should always return a boolean", () => {
+    assert.isBoolean(uze.math.isPrime(19))
+    assert.isBoolean(uze.math.isPrime(1024))
+    assert.isBoolean(uze.math.isPrime())
+  })
+
+  it("should return true if num is prime", () => {
+    assert.isTrue(uze.math.isPrime(199))
+  })
+  it("should return false if num is not prime", () => {
+    assert.isFalse(uze.math.isPrime(65536))
+    assert.isFalse(uze.math.isPrime())
+  })
+})
+
+describe("factorial", () => {
+  it("should always return a number", () => {
+    assert.isNumber(uze.math.factorial(3))
+    assert.isNumber(uze.math.factorial(20))
+    assert.isNumber(uze.math.factorial())
+  })
+  it("should return the factor of the given number", () => {
+    assert.equal(uze.math.factorial(7), 5040)
+    assert.equal(uze.math.factorial(10), 3628800)
+  })
+})
