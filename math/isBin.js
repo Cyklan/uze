@@ -6,7 +6,8 @@
  */
 
 const isBin = num => {
-  const reg = new RegExp(/[01]/g)
+  if (!num) return false
+  const reg = new RegExp(/^([0-1]){1,}$/g)
   return reg.test(num.toString())
 }
 

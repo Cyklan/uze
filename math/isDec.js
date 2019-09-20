@@ -5,9 +5,6 @@
  * @returns {boolean} Wether or not `num` is a decimal number
  */
 
-const isDec = num => {
-  const reg = new RegExp(/[0-9]/g)
-  return reg.test(num.toString())
-}
+const isDec = num => !isNaN(num)
 
 module.exports = isDec

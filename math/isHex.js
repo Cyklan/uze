@@ -6,7 +6,8 @@
  */
 
 const isHex = num => {
-  const reg = new RegExp(/[0-9A-Fa-f]/g)
+  if (!num) return false
+  const reg = new RegExp(/^([0-9A-Fa-f]){1,}$/g)
   return reg.test(num.toString())
 }
 

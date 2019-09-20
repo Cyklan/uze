@@ -8,11 +8,13 @@
  * @example toBin(20, {dec: true})
  */
 const toBin = (num, options) => {
+  if (!num) return null
+  let result
   options = options || {dec: true}
-  if (options.bin) return num
-  if (options.dec) return parseInt(num).toString(2)
-  if (options.hex) return parseInt(num, 16).toString(2)
-  return null
+  if (options.bin) result = num
+  if (options.dec) result = parseInt(num).toString(2)
+  if (options.hex) result = parseInt(num, 16).toString(2)
+  return !isNaN(result) ? result : null
 }
 
 module.exports = toBin

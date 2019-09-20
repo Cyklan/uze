@@ -1,7 +1,3 @@
-const isBin = require("./isBin")
-const isHex = require("./isHex")
-const isDec = require("./isDec")
-
 /**
  * Convert a number require(binary or hexadecimal number to decimal
  * @param {string|number} num binary or hexadecimal number
@@ -12,11 +8,12 @@ const isDec = require("./isDec")
  * @example toDec("1F", {hex: true})
  */
 const toDec = (num, options) => {
+  let result
   options = options || {dec: true}
-  if (options.dec) return num
-  if (options.bin) return parseInt(num, 2)
-  if (options.hex) return parseInt(num, 16)
-  return null
+  if (options.dec) result = num
+  if (options.bin) result = parseInt(num, 2)
+  if (options.hex) result = parseInt(num, 16)
+  return !isNaN(result) ? result : null
 }
 
 module.exports = toDec

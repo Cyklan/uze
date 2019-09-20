@@ -1,15 +1,19 @@
 {
   "name": "uze",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "Another JavaScript utility package",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "keywords": [],
   "author": {
     "name": "Nils Fahle",
     "email": "dev@cyklan.de"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
+  }
 }
