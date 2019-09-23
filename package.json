@@ -1,6 +1,6 @@
 {
   "name": "uze",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "Another JavaScript utility package",
   "main": "index.js",
   "scripts": {
